@@ -23,7 +23,7 @@ pip3 install scikit-learn
 ```  
 After you complete the installation for scikit-learn, you can check the status of sklearn dependencies and your installation details by typing:
 ```properties
-python -c "import sklearn; sklearn.show_versions()"
+python3 -c "import sklearn; sklearn.show_versions()"
 ``` 
 The minimum versions of sklearn dependencies are listed below along with their purposes:
 ![image](https://github.com/tmwang7324/Medicaid-Analysis/assets/121271571/4b7810dc-7590-483b-a7e9-c8933095cc75)

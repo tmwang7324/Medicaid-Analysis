@@ -7,11 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1_c_-fR2Bbu5_Udywp8-DiCzDzEOsG2gW
 """
 
-from google.colab import drive
-drive.mount('/content/drive')
 
-import os
-os.chdir('/content/drive/MyDrive/csvfiles')
 
 import pandas as pd
 df = pd.read_csv('df.csv')

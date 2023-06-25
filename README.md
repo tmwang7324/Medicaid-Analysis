@@ -42,10 +42,7 @@ You can see all of your installed packages by typing:
 ```properties
 pip3 freeze
 ```
-To install google.colab with Python, open a terminal and type:  
-```properties
-pip3 install google.colab
-```
+
 ## Usage
 To run newprophet.py, you first need to download the df.csv file in the repository.  Make sure df.csv is in the same directory as newprophet.py.  Then, once you are inside that directory on command line, do
 ```properties

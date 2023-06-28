@@ -2,18 +2,14 @@
 This project features a collection of scripts that filter, model, and create accurate forecasts of Medicaid enrollment and expenditure data.  These scripts implement a machine learning based forecasting tool called <a href = "https://github.com/facebook/prophet">Prophet</a> and are written with Python and R.
 
 ## Installation
-To run this project, you need to have the latest releases of Python and R installed.
+This project is implemented using the latest releases of Python and R.
 * stable release - Python 3.11.4
 * binary release - R 4.3.0
 
-To run the Python file, you also need to have pandas, scikit-learn, Prophet, google.colab, and matplotlib packages installed using Python.
+To run the Python scripts, you also need to have pandas, scikit-learn, Prophet, statsmodels, and matplotlib packages installed using Python.
 
 For R, the required packages will be installed when the script is run.
-
-To install Prophet with Python, open a terminal and type:
-```properties
-pip3 install Prophet
-```  
+ 
 To install pandas with Python, open a terminal and type:
 ```properties
 pip3 install pandas
@@ -42,17 +38,34 @@ You can see all of your installed packages by typing:
 ```properties
 pip3 freeze
 ```
+To install Prophet with Python, open a terminal and type:
+```properties
+pip3 install Prophet
+```
+Make sure that the installed version of Prophet is the latest version: 1.1.4.  
+
+To install statsmodels with Python, open a terminal and type:
+```properties
+pip3 install statsmodels
+```
+Make sure that the installed version of statsmodels is the latest version: 0.14.0. 
 
 ## Usage
-To run newprophet.py, you first need to download the df.csv file in the repository.  Make sure df.csv is in the same directory as newprophet.py.  Then, once you are inside that directory on command line, do
+To run newprophet.py, ensure that you have downloaded df.csv is in the same directory as newprophet.py.  Then, go into that directory on command line and type
 ```properties
 python3 newprophet.py
 ```
 
-To run 'facebook prophet forcast.R', you first need to download newdata.xlsx into the same directory as 'facebook prophet forecast.R.'  Then, once you are inside that directory on command line do:
+To run 'facebook prophet forcast.R', ensure that you have downloaded newdata.xlsx into the same directory as 'facebook prophet forecast.R.'  Then, go into that directory on command line and type:
 ```properties
 Rscript facebook\ prophet\ forcast.R
 ```
+
+To run 'exponential_smoothing (1)'.py, ensure that you have downloaded df.csv into the same directory as 'exponential_smoothing (1).py.'  Then, go into that directory on command line and type:
+```properties
+python3 'exponential_smoothing (1).py'
+```
+The second graph only shows after you close the first Actual vs. Predicted graph.
 
 
 

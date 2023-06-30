@@ -68,8 +68,11 @@ install.packages("lubridate")
 ```
 
 1.  If this is your first time installing a R package, R will ask if you want to install the package in a personal library.
-2.  Hit "yes" and change the path of your personal library to point to an empty directory.
-3.  You will then be inquired to select a CRAN mirror from a list:  ![image](https://github.com/tmwang7324/Medicaid-Analysis/assets/121271571/df608f76-92b9-484b-865a-cc61f968c15e)
+2.  Hit "yes" and change the path of your personal library to any empty directory.
+3.  You will then be inquired to select a CRAN mirror from a list:
+
+![image](https://github.com/tmwang7324/Medicaid-Analysis/assets/121271571/df608f76-92b9-484b-865a-cc61f968c15e)
+
 4.  Choose whichever mirror is closest to you.
 
 

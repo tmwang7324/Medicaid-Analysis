@@ -17,17 +17,18 @@ training_size <- as.integer(nrow(df) * 0.8)
 testing_size <- (length(df) - training_size)
 train_data <- head(df, training_size)
 testing_data <- tail(df, testing_size)
-
+time_train_data <- ts(data = train_data[,"y"], start = c(2014, 1), frequency = 12)
 
 
 # uses holt's method to create a forecast of the training dataset
-holt.model <- holt(train_data[,"y"],beta = 0.0651, h = 30, trend = "additive", seasonal = "additive", seasonal_periods = 12)
+holt.model <- holt(train_data[,"y"],beta = 0.0651, h = 46, level = c(80), trend = "additive", seasonal = "additive", seasonal_periods = 12)
 summary(holt.model)
 
 autoplot(holt.model)
 fitted_model <- fitted(holt.model)
 # compares the forecast of the training data set with the test dataset.
 accuracy(holt.model ,testing_data[,"y"])
+accuracy(fitted_model, train_data[,"y"])
 # finds the optimal beta
 beta <- seq(0.001, 0.5, by = .001)
 MAE <- NA
@@ -46,18 +47,24 @@ ggplot(beta.fit, aes(beta, MAE)) +
   geom_point(data = beta.min, aes(beta, MAE), size = 2, color = "blue")
 
 
-p1 <- autoplot(holt.model) +
-  theme(legend.position = "bottom")
+p1 <- plot(time_df) +
+
+  theme(legend.position = "bottom") +
+  lines(fitted_model)
+
+legend("topright", c("actual", "fitted_model"))
 p3 <- autoplot(holt.model) + autolayer(fitted_model)
 show(p3)
 
-plot_data <- ts (testing_data[,"y"], start = 90)
+plot_data <- ts (testing_data[,"y"], start = c(2021, 3), frequency = 12)
 p2 <- autoplot(plot_data, ts.colour = 'red', ts.linetype ="dashed") +
   autolayer(holt.model) +
   ggtitle("Predicted vs. actuals for the test data set")
 show(p2)
 gridExtra::grid.arrange(p1, p2, nrow = 1)
-prediction <- predict(holt.model, newdata = df, start = 2023-3-1, end = 2033-12-1)
+prediction <- forecast( holt.model, h = 24)
+print(prediction)
+autoplot(prediction)
 
 
 

@@ -1,6 +1,9 @@
 # Medicaid Research Project &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;                                                                                                 <a href="https://emrts.us" target="_blank"> ![image](https://github.com/tmwang7324/Medicaid-Analysis/assets/121271571/16e51d9d-e2f7-4e49-b407-1005281d932a) </a>
 This project features a collection of scripts that filter, model, and create accurate forecasts of Medicaid enrollment and expenditure data.  These scripts implement a machine learning based forecasting tool called <a href = "https://github.com/facebook/prophet">Prophet</a> and are written with Python and R.
 
+The data we used for the Medicaid enrollment of each State was collected by the Kaiser Family Foundation and is recorded in "rawdata.csv."
+The data we used for the Medicaid expenditure of each State was collected by the US Department of Health and Human Services Office of Inspector General and is located  <a href = "https://oig.hhs.gov/fraud/medicaid-fraud-control-units-mfcu/">here</a> under the "Expenditures & Statistics" tab.
+
 ## Installation
 This project is implemented using the latest releases of Python and R.
 * stable release - Python 3.11.4
